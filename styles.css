@@ -51,7 +51,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 15px 0;
+    padding: 05px 0;
 }
 
 
@@ -74,11 +74,23 @@ body {
     color:var(--text-light);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: color 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .nav-link:hover {
     color: var(--primary-orange);
+    text-shadow: 0 0 8px rgba(230, 81, 0, 0.6);
+        color: var(--primary-orange);
+    /* 1. Sombra de resplandor suave alrededor del texto */
+    text-shadow: 0 0 8px rgba(230, 81, 0, 0.6);
+    /* 2. Fondo sutil naranja semitransparente */
+    background-color: rgba(230, 81, 0, 0.1);
+    /* 3. Sombra inferior proyectada (box-shadow) */
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.35);
+    /* 4. Elevación leve de 3px hacia arriba */
+    transform: translateY(-3px);
 }
 
 /* ==========================================
@@ -173,12 +185,21 @@ body {
     border: 10px solid #2A2A2A;
     border-radius: 36px;
     background-color: #000000;
-    padding: 20px;
+    padding: 0; /* Cambiamos el padding a 0 para que la imagen ocupe toda la pantalla */
+    overflow: hidden; /* Corta las esquinas de la imagen para ajustarse al borde */
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.phone-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 26px; /* Curvatura interna del marco */
+}
+
 
 .phone-screen {
     text-align: center;
